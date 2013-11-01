@@ -9,7 +9,7 @@ require 'spec_helper'
 				visit new_wheel_path
 				expect(page).to have_content 'Create your wheel'	
 			end	
-				
+
 
 			it 'should show the wheel with click on "create wheel" button'  do
 				visit new_wheel_path			
@@ -31,23 +31,21 @@ require 'spec_helper'
 
 		end
 
-
-
-		# login / registration
-
-		# describe 'wheel' do
-		# 	it 'should display a wheel if the user is logged in' do
-		# 		visit '/wheels/:id'
-		# 		expect(page).to have_content 'Your personal wheel'	
-		# 	end	
-		# end
-
-		# describe 'wheel' do
-		# 	it 'should not be display if the user is logged out' do
-		# 		visit '/wheels/:id'
-		# 		expect(page).to have_content 'Your personal wheel'	
-		# 	end	
-		# end
-
-
+		describe 'individual wheel' do
+			before(:each) do
+    		load "#{Rails.root}/db/seeds.rb" 
+  			end
+			
+			it 'should show the wheel with click on "create wheel" button'  do
+				visit new_wheel_path			
+					page.all(:css, '.question').each do |q|
+						within q do
+							choose 'Strongly agree'
+						end
+					end
+				
+				click_button 'Create Wheel'
+				expect(page).to have_content 'section sum = 20'	
+			end		
+		end	
 

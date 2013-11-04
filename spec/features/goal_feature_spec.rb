@@ -12,7 +12,7 @@ it 'should show a form for creating goals for every section'  do
 					end
 				
 				page.find('.homeButton').click
-				click_link 'Personal growth & development'
+				visit new_goal_path
 				expect(page).to have_css '.set_goal'		
 			end	
 

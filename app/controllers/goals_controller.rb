@@ -1,18 +1,41 @@
 class GoalsController < ApplicationController
 
-	def new
-   	@goal = Goal.new
+	def index
+    	@goals = Goal.all
+  	end
+
+  	def new
+  		@section = Section.find params[:section_id]
+   		@goal = Goal.new
 	end
 
 	def create
-    @goal = Goal.new
+		@section = Section.find params[:section_id]
+    	@goal = Goal.new(params[:goal].permit(:title, :due_date, :notes, :priority))
+    	@goal.section = @section
       
-	    if @goall.save
-	      	redirect_to @wheel
+	    if @goal.save!
+	      	redirect_to goals_path
 	    else
-	    	flash.now[:error] = @wheel.errors.full_messages.inspect
-	    	render action 'new'
+	    	flash.now[:error] = @goal.errors.full_messages.inspect
+	    	render 'new'
 	    end
 	end
+
+	def edit
+    	@goal = Goal.find(params[:id])
+  	end
+
+  	def update
+    	@goal = Goal.find(params[:id])
+    	puts @goal
+    	if @goal.update_attributes(params[:goal])
+      		flash[:notice] = 'The goal was saved successfully.'
+      		redirect_to :action=>'index'
+    	else
+      		flash[:notice] = 'The goal could not be saved.'
+      		redirect_to :action=>'edit'
+    	end
+  end
 
 end

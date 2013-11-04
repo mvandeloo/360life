@@ -1,0 +1,21 @@
+
+<%= @goal.section_id %>
+<%= form_for @goal do |f| %>
+
+  <%= f.label :title %><br>
+  <%= f.text_field :title, placeholder: 'Goal title' %><br>
+  <%= f.label :notes %><br>
+  <%= f.text_field :notes, placeholder: 'Notes' %><br>
+  <%= f.label(:due_date) %><br>
+  <%= f.date_field(:due_date) %><br>
+  <%= f.label :priority %><br>
+  <%= f.select(:priority, [['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]]) %><br>
+  <%= f.label :completion %><br>
+  <%= f.check_box :completion %><br>
+  <%= f.submit %>
+<% end %>
+ 
+
+<% if flash[:error] -%>
+ 	<%= flash[:error] %>
+<% end -%>

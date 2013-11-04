@@ -43,7 +43,7 @@ class WheelsController < ApplicationController
         redirect_to @wheel
       else
         flash.now[:error] = @wheel.errors.full_messages.inspect
-        render action 'new'
+        render 'new'
       end
     end
   end

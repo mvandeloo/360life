@@ -6,9 +6,13 @@ LifeApp::Application.routes.draw do
     resources :sections
     resources :questions
     resources :answers
-  end  
-  
-  resources :goals
+  end
+
+  resources :sections do
+    resources :goals
+  end
+  resources :goals, only: [:index]
+
   root :to => "static#homepage"
 
   # The priority is based upon order of creation: first created -> highest priority.

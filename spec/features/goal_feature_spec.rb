@@ -12,7 +12,7 @@ it 'should show a form for creating goals for every section'  do
 					end
 				
 				page.find('.homeButton').click
-				visit new_goal_path
+				visit new_section_goal_path(section = 9)
 				expect(page).to have_css '.set_goal'		
 			end	
 
@@ -25,7 +25,7 @@ it 'should raise an error if the goal has no name'  do
 					end
 				
 				page.find('.homeButton').click
-				click_link 'Personal growth & development'
+				visit new_section_goal_path(section = 9)
 				click_button 'Create Goal'
 				expect(page).to have_css '.set_goal'		
 			end	

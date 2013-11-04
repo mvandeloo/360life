@@ -36,17 +36,6 @@ require 'spec_helper'
     		load "#{Rails.root}/db/seeds.rb" 
   			end
 			
-			it 'should show the wheel with click on "create wheel" button'  do
-				visit new_wheel_path			
-					page.all(:css, '.question').each do |q|
-						within q do
-							choose 'Strongly agree'
-						end
-					end
-				
-				page.find('.homeButton').click
-				expect(page).to have_content 'section sum = 20'	
-			end	
 
 			it 'should show the wheel with click on "create wheel" button'  do
 				visit new_wheel_path			
@@ -57,7 +46,7 @@ require 'spec_helper'
 					end
 				
 				page.find('.homeButton').click
-				expect(page).to have_content 'section sum = 20'	
+				expect(page).to have_content 'section percent is 100'	
 				expect(page).to have_content 'save wheel'		
 			end		
 		end	

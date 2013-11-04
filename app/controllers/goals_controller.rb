@@ -29,7 +29,7 @@ class GoalsController < ApplicationController
   	def update
     	@goal = Goal.find(params[:id])
     	puts @goal
-    	if @goal.update_attributes(params[:goal])
+    	if @goal.update_attributes(params[:goal].permit(:title, :due_date, :notes, :priority))
       		flash[:notice] = 'The goal was saved successfully.'
       		redirect_to :action=>'index'
     	else

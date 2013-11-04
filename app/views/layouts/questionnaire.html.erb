@@ -22,16 +22,26 @@
 	<div id="container">
 
 		<!-- BEGIN: Header -->
-    <div id="logoback" class="shadow">
+<!--     <div id="logoback" class="shadow">
         <div id="logo">
           <a href=""><img src="/assets/360-Logo.png" width="120" height="120"/></a>
       </div>
-    </div>
+    </div -->
 
-      <div id="navheader">
+    <!-- BEGIN: Navbar -->
+      <div id="navigation-bar" class="shadow">
+        <ul class="nav">
+           <li><a href="/">Home</a></li>
+           <li><a href="#">Link 1</a></li>
+           <li><a href="#">Link 2</a></li>
+           <li><a href="/users/sign_up">Sign Up</a></li>
+           <li><a href="/users/sign_in">Login</a></li>
+        </ul>
+
+     <!--  <div id="navheader">
         <%= yield :nav_header %>
       </div>
-
+ -->
       
     <% if current_user %>
     logged in as <% current_user.email %>

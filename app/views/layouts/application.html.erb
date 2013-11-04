@@ -11,9 +11,7 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "http://code.jquery.com/jquery-1.9.1.js" %>
   <%= javascript_include_tag "http://code.jquery.com/ui/1.10.3/jquery-ui.js" %>
- 
-
-	<%= csrf_meta_tags %>
+  <%= csrf_meta_tags %>
 </head>
 
 <body>
@@ -21,16 +19,24 @@
 	<div id="container">
 
 		  <!-- BEGIN: Header -->
-      <div id="logoback" class="shadow">
+<!--       <div id="logoback" class="shadow">
         <div id="logo">
           <a href=""><img src="/assets/360-Logo.png" width="120" height="120"/></a>
         </div>
+      </div> -->
+      
+      <!-- BEGIN: Navbar -->
+      <div id="navigation-bar" class="shadow">
+        <ul class="nav">
+           <li><a href="/">Home</a></li>
+           <li><a href="#">Link 1</a></li>
+           <li><a href="#">Link 2</a></li>
+           <li><a href="/users/sign_up">Sign Up</a></li>
+           <li><a href="/users/sign_in">Login</a></li>
+        </ul>      
       </div>
 
-      <div id="navheader" class="shadow">
-        <%= yield :nav_header %>
-      </div>
-
+      <!-- BEGIN: Body Main -->
       <div id="main" class="shadow">
           
         <% if current_user %>

@@ -34,8 +34,8 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
 #logoback {
     padding-top: 12px;
     background-color: #ff7700;
-    border-radius: 30px 30px 30px 30px;
-    margin: 20px 0 20px 0;
+    border-radius: 20px 20px 20px 20px;
+    margin: 20px 0 15px 0;
 }
 #logo {
     padding-top: 5px;
@@ -43,43 +43,21 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
     text-align: center;
 }
 /* Nav-bar */
-#navheader {
+#navigation-bar {
     height: 45px;
-    margin-top: 45px;
-    padding-top: 12px;
-    background-color: rgb(22,129,204);
-    border-radius: 30px 30px 30px 30px;
-}
-#navmission {
-    padding-left:30px;
-    float: left;
-}
-#navmission2 {
-    padding-left:30px;
-    float: left;
-}
-#navinspired {
-    padding-left:20px;
-    float: left;
-}
-#navinspired2 {
-    padding-left:20px;
-    float: left;
-}
-#navstore {
-    padding-left:35px;
-    float: left;
+    padding-top: 60px;
+    border-radius: 20px 20px 20px 20px;
 }
 /* Main */
 #main {
-    border-radius: 30px 30px 30px 30px;
+    border-radius: 20px 20px 20px 20px;
     background-color: rgba(255, 255, 255, 0.55);
     height: 378px;
     padding: 42px 48px 42px 48px;
     font-family: Helvetica Neue, Arial, sans-serif;
     font-size: 14px;
     line-height: 16px;
-    margin: 20px 0 30px 0;
+    margin: 30px 0 30px 0;
 }
 #content_left {
     float: left;
@@ -104,16 +82,17 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
     color: #767f84;
     margin-bottom: 20px;
     }
-#home_othertext1 {
+#home_subtext {
     font: 20px Arial, Helvetica, sans-serif;
     line-height: 20px;
     color: #767f84;
     margin-bottom: 20px;
 }
-#home_othertext2 {
+#home_text {
     font: 18px Arial, Helvetica, sans-serif;
     line-height: 20px;
     color: #767f84;
+    margin-bottom: 5px;
 }
 /* Home Button */
 .homeButton {
@@ -171,7 +150,7 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
     height: 45px;
     padding-top: 12px;
     background-color: #aed32a;
-    border-radius: 30px 30px 30px 30px;
+    border-radius: 20px 20px 20px 20px;
     margin-bottom: 45px;
 }
 #footer #inside_nav {
@@ -179,7 +158,7 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
     padding-bottom: 15px;
     padding-left: 15px;
     color:#898989;
-    font: 10px/15px Arial, Helvetica, sans-serif;
+    font: 12px/15px Arial, Helvetica, sans-serif;
 }
 #footer ul {
     clear:left;
@@ -197,114 +176,104 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
     color:#898989;
     text-decoration:none;
 }
-#mainBuild {
-    position:relative;
-    height: 433px;
-    border-top: 1px solid #e8e8e8;
-    border-right: 1px solid #e8e8e8;
-    border-bottom: none #e8e8e8;
-    border-left: 1px solid #e8e8e8;
+/* Navbar */
+/* Some stylesheet reset */
+ul.nav, .nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    line-height: 1;
 }
-#mainInspire {
-    position:relative;
-    height: 393px;
-    border-top: 1px solid #e8e8e8;
-    border-right: 1px solid #e8e8e8;
-    border-bottom: none #e8e8e8;
-    border-left: 1px solid #e8e8e8;
-    background: url("../images/inspired/inspiredback.jpg") repeat-x;
+/* The container */
+.nav {
+    display: block;
+    position: relative;
 }
-#mainnav {
-}twitter border form div-1
-#mainnav .button{
+/* The list elements which contain the links */
+.nav>li {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0; 
+}
+/* General link styling */
+.nav>li>a, .nav ul li a {
+    /* Layout */
+    display: block;
+    position: relative;
+    margin: 0 0 0 0;
+    padding: 22px 84px;
+    /* Typography */
+    font-family: 'Yanone Kaffeesatz', Helvetica, Arial, sans-serif;
+    color: #d8d8d8;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px #000;
+    font-size: 12px;
+    /* Background & effects */
+    background: #0382c7; /* Background for Internet Explorer 9 and older browsers */
+    background: -webkit-linear-gradient(bottom, #0382c7, #06344d); 
+    background: -ms-linear-gradient(bottom, #0382c7, #06344d); 
+    background: -moz-linear-gradient(bottom, #0382c7, #06344d); 
+    -webkit-transition: background .2s linear;
+}
+/* The main menu links */
+.nav>li>a {
+    border-right: 1px dotted #0382c7;
+    border-left: 1px dotted #0382c7;
+}
+/* Rounded corners for the first link of the main menu */
+.nav>li:first-child>a {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-left: 0;
+}
+/* Rounded corners for the last link of the main menu */
+.nav>li:last-child>a {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-right: 0;
+}
+/* The hover state of the menu/submenu links */
+.nav>li>a:hover, .nav>li:hover>a, .nav ul li a:hover, .nav ul li:hover>a {
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .3);
+    background: #aed32a;
+    background: -webkit-linear-gradient(bottom, #aed32a, #06344d);
+    background: -ms-linear-gradient(bottom, #aed32a, #06344d); 
+    background: -moz-linear-gradient(bottom, #aed32a, #06344d);
+    background: -o-linear-gradient(bottom, #aed32a, #06344d);
+    border-color: transparent;
+}
+/*#navheader {
+    height: 45px;
+    margin-top: 45px;
+    padding-top: 12px;
+    background-color: rgb(22,129,204);
+    border-radius: 30px 30px 30px 30px;
+}
+#navmission {
+    padding-left:30px;
     float: left;
 }
-#bottom-color {
-    padding-top: 30px;
-    padding-bottom: 28px;
+#navmission2 {
+    padding-left:30px;
+    float: left;
 }
-#div-1 {
-    position:relative;
-    width: 928px;
+#navinspired {
+    padding-left:20px;
+    float: left;
 }
-.button_size {
-    padding-top: 20px;
-    padding-left: 65px;
+#navinspired2 {
+    padding-left:20px;
+    float: left;
 }
-.button2_size {
-    padding-top: 20px;
-    padding-left: 77px;
-}
-.button3_size {
-    padding-top: 20px;
-    padding-left: 84px;
-}
-.button4_size {
-    padding-top: 20px;
-    padding-left: 64px;
-}
-.button_1 {
-    float:left;
-    height: 50px;
-    width: 238px;
-    background: url("../images/button_left_side.jpg") no-repeat;
-    cursor: pointer;
-}
-.button_2 {
-    float:left;
-    height: 50px;
-    width: 238px;
-    background: url("../images/button_left_gradient.jpg") no-repeat;
-    cursor: pointer;
-}
-.button_3 {
-    float:left;
-    height: 50px;
-    width: 238px;
-    background: url("../images/button_left_gradient.jpg") no-repeat;
-    cursor: pointer;
-}
-.button_4 {
-    float:left;
-    height: 50px;
-    width: 238px;
-    background: url("../images/button_right_side_gradient.jpg") no-repeat;
-    cursor: pointer;
-}
-#button1_position {
-    position:absolute;
-    overflow:hidden;
-    height: 257px;
-    width: 270px;
-    left: 0px;
-    top: -257px;
-    display:none;
-}
-#button2_position {
-    position:absolute;
-    overflow:hidden;
-    height: 257px;
-    width: 302px;
-    left: 206px;
-    top: -257px;
-    display:none;
-}
-#button3_position {
-    position:absolute;
-    overflow:hidden;
-    height: 257px;
-    width: 302px;
-    left: 444px;
-    top: -257px;
-}
-#button4_position {
-    position:absolute;
-    overflow:hidden;
-    height: 257px;
-    width: 302px;
-    left: 666px;
-    top: -257px;
-}
+#navstore {
+    padding-left:35px;
+    float: left;
+}*/
+/*
 #backgray  {
     background-color:#000000;
     height: 448px;
@@ -323,4 +292,4 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
     opacity: .8;
     margin-bottom: 33px;
     position:relative;
-}  
+}  */

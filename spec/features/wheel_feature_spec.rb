@@ -7,7 +7,7 @@ require 'spec_helper'
 			
 			it 'should have a form for creating a wheel' do
 				visit new_wheel_path
-				expect(page).to have_content 'Create your wheel'	
+				expect(page).to have_content 'To create your personalized life balance wheel please select and answer all the questions below.'	
 			end	
 
 
@@ -19,13 +19,13 @@ require 'spec_helper'
 						end
 					end
 				
-				click_button 'Create Wheel'
+				page.find('.homeButton').click
 				expect(page).to have_content 'Your personal wheel'	
 			end	
 
 			it 'should raise an error if the user has not selected an answer for every question'  do
 				visit new_wheel_path			
-				click_button 'Create Wheel'
+				page.find('.homeButton').click
 				expect(page).to have_content 'Please fill out all the answers'	
 			end	
 
@@ -36,17 +36,6 @@ require 'spec_helper'
     		load "#{Rails.root}/db/seeds.rb" 
   			end
 			
-			it 'should show the wheel with click on "create wheel" button'  do
-				visit new_wheel_path			
-					page.all(:css, '.question').each do |q|
-						within q do
-							choose 'Strongly agree'
-						end
-					end
-				
-				click_button 'Create Wheel'
-				expect(page).to have_content 'section sum = 20'	
-			end	
 
 			it 'should show the wheel with click on "create wheel" button'  do
 				visit new_wheel_path			
@@ -56,21 +45,8 @@ require 'spec_helper'
 						end
 					end
 				
-				click_button 'Create Wheel'
-				expect(page).to have_content 'section sum = 20'	
+				page.find('.homeButton').click
+				expect(page).to have_content 'section percent is 100'	
 				expect(page).to have_content 'save wheel'		
-			end	
-
-			it 'should show a form for creating goals for every section'  do
-				visit new_wheel_path			
-					page.all(:css, '.question').each do |q|
-						within q do
-							choose 'Strongly agree'
-						end
-					end
-				
-				click_button 'Create Wheel'
-				click_link 'Personal growth & development'
-				expect(page).to have_css '.set_goal'		
 			end		
 		end	

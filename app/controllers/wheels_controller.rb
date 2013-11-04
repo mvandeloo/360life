@@ -13,7 +13,7 @@ class WheelsController < ApplicationController
 	
 
 	def show
-    @wheel = Wheel.find(params[:id])
+    @wheel = Wheel.find params[:id]
     @selected_answer_values = @wheel.answers.map(&:answer_value)
     @selected_answer_id = @wheel.answers.map(&:id)
     @selected_answers = @wheel.answers
@@ -43,7 +43,7 @@ class WheelsController < ApplicationController
         redirect_to @wheel
       else
         flash.now[:error] = @wheel.errors.full_messages.inspect
-        render action 'new'
+        render 'new'
       end
     end
   end

@@ -36,34 +36,33 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
     background-color: #ff7700;
     border-radius: 20px 20px 20px 20px;
     margin: 20px 0 15px 0;
-}
-#logo {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-align: center;
 }*/
-/* Nav-bar */
+#logo {
+    float: left;
+}
+#logo img {
+    width: 190px;
+    margin-top: 10px;
+    margin-bottom: -40px;
+}
 #navigation-bar {
-    height: 45px;
-    padding-top: 60px;
-    border-radius: 20px 20px 20px 20px;
+    padding-top: 70px;
 }
 /* Main */
 #main {
     border-radius: 20px 20px 20px 20px;
     background-color: rgba(255, 255, 255, 0.55);
-/*    height: 378px;
-*/    padding: 42px 48px 42px 48px;
+    padding: 42px 48px 42px 48px;
     font-family: Helvetica Neue, Arial, sans-serif;
     font-size: 14px;
     line-height: 16px;
     margin: 30px 0 30px 0;
+    clear:left;
 }
 .questionnaire #main {
     padding-left: 0;
     padding-right: 0;
 }
-
 #content_left {
     float: left;
     margin-right: 7px;
@@ -75,6 +74,11 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
     margin-left: 7px;
     display: inline-block;
     width: 380px;
+}
+h3 {
+    padding: 0 0 15px 36px;
+    font-family: Helvetica Neue, Arial, sans-serif;
+    font-size: 20px;
 }
 .clear {
     clear: both;
@@ -105,7 +109,7 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
     -webkit-box-shadow: 0px 10px 14px -7px #276873;
     box-shadow: 0px 10px 14px -7px #276873;
     
-    background-color:transparent;
+    background-color:hsla(0,0%,100%,0.5);
     
     -moz-border-radius:8px;
     -webkit-border-radius:8px;
@@ -120,10 +124,10 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
     margin: 20px 0 0 320px;
     text-decoration:none;
     
-    text-shadow:0px 1px 0px #3d768a;
+    text-shadow:3px 3px 10px #3d768a;
 }
 .homeButton:hover {
-    background-color:transparent;
+    background-color:hsla(0,0%,100%,0.5);
 }
 .homeButton:active {
     position:relative;
@@ -208,7 +212,7 @@ ul.nav, .nav ul {
     display: block;
     position: relative;
     margin: 0 0 0 0;
-    padding: 22px 84px;
+    padding: 22px 65px;
     /* Typography */
     font-family: 'Yanone Kaffeesatz', Helvetica, Arial, sans-serif;
     color: #d8d8d8;
@@ -230,14 +234,14 @@ ul.nav, .nav ul {
 }
 /* Rounded corners for the first link of the main menu */
 .nav>li:first-child>a {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
     border-left: 0;
 }
 /* Rounded corners for the last link of the main menu */
 .nav>li:last-child>a {
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
     border-right: 0;
 }
 /* The hover state of the menu/submenu links */
@@ -245,56 +249,5 @@ ul.nav, .nav ul {
     color: #fff;
     text-shadow: 0 1px 0 rgba(0, 0, 0, .3);
     background: #aed32a;
-    background: -webkit-linear-gradient(bottom, #aed32a, #06344d);
-    background: -ms-linear-gradient(bottom, #aed32a, #06344d); 
-    background: -moz-linear-gradient(bottom, #aed32a, #06344d);
-    background: -o-linear-gradient(bottom, #aed32a, #06344d);
     border-color: transparent;
 }
-/*#navheader {
-    height: 45px;
-    margin-top: 45px;
-    padding-top: 12px;
-    background-color: rgb(22,129,204);
-    border-radius: 30px 30px 30px 30px;
-}
-#navmission {
-    padding-left:30px;
-    float: left;
-}
-#navmission2 {
-    padding-left:30px;
-    float: left;
-}
-#navinspired {
-    padding-left:20px;
-    float: left;
-}
-#navinspired2 {
-    padding-left:20px;
-    float: left;
-}
-#navstore {
-    padding-left:35px;
-    float: left;
-}*/
-/*
-#backgray  {
-    background-color:#000000;
-    height: 448px;
-    border-top: 1px solid #e8e8e8;
-    border-right: 1px solid #e8e8e8;
-    border-bottom: none #e8e8e8;
-    border-left: 1px solid #e8e8e8;
-    overflow:hidden;
-    width: 951px;
-    left: 0px;
-    top: 10px;
-    z-index: 25;
-    filter:alpha(opacity=80);
-    -moz-opacity: .8;
-    KhtmlOpacity: .8;
-    opacity: .8;
-    margin-bottom: 33px;
-    position:relative;
-}  */

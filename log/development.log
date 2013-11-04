@@ -1,7 +1,0 @@
-  [1m[36mSection Load (1.5ms)[0m  [1mSELECT "sections".* FROM "sections" ORDER BY "sections"."id" DESC LIMIT 1[0m
-  [1m[36mGoal Load (1.3ms)[0m  [1mSELECT "goals".* FROM "goals" ORDER BY "goals"."id" DESC LIMIT 2[0m
-  [1m[35mSQL (1.2ms)[0m  DELETE FROM "goals" WHERE "goals"."id" = 2
-  [1m[36mGoal Load (0.8ms)[0m  [1mSELECT "goals".* FROM "goals" ORDER BY "goals"."id" DESC LIMIT 1[0m
-  [1m[35mGoal Load (0.6ms)[0m  SELECT "goals".* FROM "goals"
-  [1m[36mGoal Load (0.8ms)[0m  [1mSELECT "goals".* FROM "goals" ORDER BY "goals"."id" DESC LIMIT 2[0m
-  [1m[35mSQL (0.9ms)[0m  DELETE FROM "goals" WHERE "goals"."id" = 1

@@ -17,42 +17,42 @@
 </head>
 
 <body>
-
 <!-- BEGIN: Main Page -->
 	<div id="container">
 
-		<!-- BEGIN: Header -->
-    	<div id="logo">
-    		Logo goes here
-    	</div>
+		  <!-- BEGIN: Header -->
+      <div id="logoback" class="shadow">
+        <div id="logo">
+          <a href=""><img src="/assets/360-Logo.png" width="120" height="120"/></a>
+        </div>
+      </div>
 
-      <div id="navheader">
-
+      <div id="navheader" class="shadow">
         <%= yield :nav_header %>
       </div>
 
-      <div id="main">
+      <div id="main" class="shadow">
           
         <% if current_user %>
-        logged in as <% current_user.email %>
+         logged in as <% current_user.email %>
         <%end%>
 
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
 
         <%= yield %>
+
       </div>
 
-     <div id="footer" class="footer-home">
+      <!-- BEGIN: Footer -->
+      <div id="footer" class="footer-home shadow">
         <ul id="inside_nav">
-          <li><a href="share.html">Share This Site</a> | </li>
-          <li><a target="_blank" href="../terms-of-use.html">Terms</a> | </li>
-          <li><a target="_blank" href="../franklincovey-privacy-policy.html">Privacy</a> | </li>
-          <li><a target="_blank" href="../office.html">Contact Us</a></li>
+          <li><a href="">Share This Site</a> | </li>
+          <li><a target="_blank" href="">Terms</a> | </li>
+          <li><a target="_blank" href="">Privacy</a> | </li>
+          <li><a target="_blank" href="">Contact Us</a></li>
         </ul>
       </div>
-    	    
-
 </div>
 </body>
 </html>

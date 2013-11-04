@@ -24,10 +24,8 @@
 		<% end %>
 	</div>
 	 
-	 <div class='wheel_submit_button' >
-	  	<%= f.button "Create My Wheel" %>
-	 </div>
-
+  	
+  	<%= f.button "Create My Wheel", :class => "homeButton" %>
 
 	<% if flash[:error] -%>
 	      <%= flash[:error] %>

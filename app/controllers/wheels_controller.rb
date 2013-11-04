@@ -1,11 +1,12 @@
 class WheelsController < ApplicationController
 
-  layout 'questionnaire'
+  layout 'application'
   
 	def index
 	end
 
 	def new
+    @page = 'questionnaire'
    	@wheel = Wheel.new
     # @wheel.build_answers
 	end

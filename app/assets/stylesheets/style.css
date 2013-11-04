@@ -31,7 +31,7 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
     text-align:left;
     padding-left: 55px;
 } 
-#logoback {
+/*#logoback {
     padding-top: 12px;
     background-color: #ff7700;
     border-radius: 20px 20px 20px 20px;
@@ -41,7 +41,7 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
     padding-top: 5px;
     padding-bottom: 5px;
     text-align: center;
-}
+}*/
 /* Nav-bar */
 #navigation-bar {
     height: 45px;
@@ -52,13 +52,18 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
 #main {
     border-radius: 20px 20px 20px 20px;
     background-color: rgba(255, 255, 255, 0.55);
-    height: 378px;
-    padding: 42px 48px 42px 48px;
+/*    height: 378px;
+*/    padding: 42px 48px 42px 48px;
     font-family: Helvetica Neue, Arial, sans-serif;
     font-size: 14px;
     line-height: 16px;
     margin: 30px 0 30px 0;
 }
+.questionnaire #main {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 #content_left {
     float: left;
     margin-right: 7px;

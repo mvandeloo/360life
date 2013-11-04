@@ -7,14 +7,14 @@
 	<meta content="text/html; charset=ISO-8859-1" http-equiv="Content-Type">
 	<meta content="text/javascript" http-equiv="Content-Script-Type">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= stylesheet_link_tag "http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" %>
+  <%= stylesheet_link_tag "jquery-ui.css" %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "http://code.jquery.com/jquery-1.9.1.js" %>
-  <%= javascript_include_tag "http://code.jquery.com/ui/1.10.3/jquery-ui.js" %>
+  <%= javascript_include_tag "jquery-1.9.1.js" %>
+  <%= javascript_include_tag "jquery-ui.js" %>
   <%= csrf_meta_tags %>
 </head>
 
-<body>
+<body class="<%= @page %>">
 <!-- BEGIN: Main Page -->
 	<div id="container">
 
@@ -26,7 +26,7 @@
       </div> -->
       
       <!-- BEGIN: Navbar -->
-      <div id="navigation-bar" class="shadow">
+      <div id="navigation-bar">
         <ul class="nav">
            <li><a href="/">Home</a></li>
            <li><a href="#">Link 1</a></li>

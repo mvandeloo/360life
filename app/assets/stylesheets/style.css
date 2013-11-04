@@ -31,6 +31,17 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
     text-align:left;
     padding-left: 55px;
 } 
+#sunburst {
+    position: relative;
+}
+.wheel_back{
+    left: -17px;
+    top: -17px;
+    width: 910px;
+    height: 910px;
+    background-image:url('/assets/wheel_of_life.png');
+    position: absolute;
+}
 /*#logoback {
     padding-top: 12px;
     background-color: #ff7700;

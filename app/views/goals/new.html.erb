@@ -1,35 +1,24 @@
-<%= form_for sections.@goal do |f| %>
 
-  <%= f.label :title %>
-  <%= f.text_field :title, placeholder: 'Goal title' %>
+<%= @goal.section_id %>
+<%= form_for @goal do |f| %>
 
-	  <%= f.fields_for :questions do |question_f| %>
-	    <%= question_f.label :query, "Question" %>
-		<%= question_f.text_field :query, placeholder: 'Please add your question' %>
-
-		<%= question_f.fields_for :answers do |answer_f| %>
-		    <%= answer_f.label :response, "Answer" %>
-		    <%= answer_f.text_field :response %>
-		    <%= answer_f.check_box :correctness %>
-		<% end %>
-	  <% end %>
+  <%= f.label :title %><br>
+  <%= f.text_field :title, placeholder: 'Goal title' %><br>
+  <%= f.label :notes %><br>
+  <%= f.text_field :notes, placeholder: 'Notes' %><br>
+  <%= f.label(:due_date) %><br>
+  <%= f.date_field(:due_date) %><br>
+  <%= f.label :priority %><br>
+  <%= f.select(:priority, [['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]]) %><br>
+  <%= f.label :completion %><br>
+  <%= f.check_box :completion %><br>
   <%= f.submit %>
-
+<% end %>
+ 
 
 <% if flash[:error] -%>
  	<%= flash[:error] %>
 <% end -%>
 
-<% end %>
 
 
-eate_table "goals", force: true do |t|
-    t.text     "title"
-    t.integer  "section_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "wheel_id"
-    t.integer  "notes"
-    t.date     "due_date"
-    t.integer  "priority"
-    t.boolean  "completion"

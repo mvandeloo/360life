@@ -1,6 +1,6 @@
 
-var width = 960,
-    height = 700,
+var width = 900,
+    height = 900,
     radius = Math.min(width, height) / 2;
 
 var x = d3.scale.linear()
@@ -11,7 +11,7 @@ var y = d3.scale.linear()
 
 var color = d3.scale.category20c();
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#sunburst").append("svg")
     .attr("width", width)
     .attr("height", height)
     .append("g")

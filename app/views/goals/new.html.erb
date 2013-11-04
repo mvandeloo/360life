@@ -1,0 +1,35 @@
+<%= form_for sections.@goal do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title, placeholder: 'Goal title' %>
+
+	  <%= f.fields_for :questions do |question_f| %>
+	    <%= question_f.label :query, "Question" %>
+		<%= question_f.text_field :query, placeholder: 'Please add your question' %>
+
+		<%= question_f.fields_for :answers do |answer_f| %>
+		    <%= answer_f.label :response, "Answer" %>
+		    <%= answer_f.text_field :response %>
+		    <%= answer_f.check_box :correctness %>
+		<% end %>
+	  <% end %>
+  <%= f.submit %>
+
+
+<% if flash[:error] -%>
+ 	<%= flash[:error] %>
+<% end -%>
+
+<% end %>
+
+
+eate_table "goals", force: true do |t|
+    t.text     "title"
+    t.integer  "section_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "wheel_id"
+    t.integer  "notes"
+    t.date     "due_date"
+    t.integer  "priority"
+    t.boolean  "completion"

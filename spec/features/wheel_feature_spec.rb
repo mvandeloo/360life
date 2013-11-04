@@ -58,8 +58,19 @@ require 'spec_helper'
 				
 				click_button 'Create Wheel'
 				expect(page).to have_content 'section sum = 20'	
-				expect(page).to have_content 'save wheel'
+				expect(page).to have_content 'save wheel'		
+			end	
+
+			it 'should show a form for creating goals for every section'  do
+				visit new_wheel_path			
+					page.all(:css, '.question').each do |q|
+						within q do
+							choose 'Strongly agree'
+						end
+					end
+				
+				click_button 'Create Wheel'
+				click_link 'Personal growth & development'
 				expect(page).to have_css '.set_goal'		
 			end		
 		end	
-

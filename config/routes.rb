@@ -7,7 +7,7 @@ LifeApp::Application.routes.draw do
     resources :questions
     resources :answers
   end  
-
+  
   resources :goals
   root :to => "static#homepage"
 

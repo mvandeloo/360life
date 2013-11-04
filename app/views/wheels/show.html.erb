@@ -1,11 +1,13 @@
 "Your personal wheel"
 
 <% @wheel.answers.group_by(&:section).each do |section, answers| %>
-	<%= section.section_name %>
+	<%= section.section_name %><br>
 	<span class="set_goal"> <%= link_to 'set goal', new_goal_path %></span>
 	<%= answers.map(&:answer_value).inspect %><br>
-	section sum = <%= section_sum = answers.map(&:answer_value).sum %><br>
+	<% section_sum = answers.map(&:answer_value).sum %><br>
+	<% section_percent = section_sum /0.2 %><br>
+	section percent is  <%= section_percent.to_i %>
 <% end %>
 
-
+<%= javascript_include_tag 'z-sanburst-d3' %>
 <%= link_to 'save wheel', wheel_path %>

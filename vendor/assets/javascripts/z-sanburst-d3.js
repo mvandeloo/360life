@@ -1,6 +1,6 @@
 
-var width = 600,
-    height = 600,
+var width = 800,
+    height = 800,
     radius = Math.min(width, height) / 2;
 
 var x = d3.scale.linear()
@@ -40,7 +40,15 @@ d3.json(window.location + ".json", function(error, root) {
       .on("click", click);
 
   function click(d) {
+<<<<<<< HEAD
     $('.set_goal a[data-section-id="' + d.id + '"]').click();
+=======
+    console.log(d.name);
+    $.get('/blah/', function(data) {
+      
+    })
+
+>>>>>>> b4adf9ca75465b16a66363e11d6005e9b7fa3231
   //alert("You chose:" +d.name);
     path.transition()
       .duration(2050)

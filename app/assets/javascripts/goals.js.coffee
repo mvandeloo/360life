@@ -3,9 +3,8 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 
-$(document).on 'ajax:success', 'form', (xhr, data, status) ->
+$(document).on 'ajax:success', '#new_goal', (xhr, data, status) ->
 	$modal = $('#modal')
 	$modal_close = $modal.find('.close')
 
 	$modal.html(data).prepend($modal_close)
-

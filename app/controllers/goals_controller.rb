@@ -1,7 +1,7 @@
 class GoalsController < ApplicationController
 
-
 before_filter :authenticate_user!, only: [:index] 
+ 
 
 	def index
     	@goals = Goal.all
@@ -24,7 +24,7 @@ before_filter :authenticate_user!, only: [:index]
       # end
 
 	    if @goal.save
-	      	redirect_to goals_path
+	      render js: "window.location = '#{ goals_path }'"
 	    else
 	    	render 'new'
 	    end

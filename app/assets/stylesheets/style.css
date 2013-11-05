@@ -63,7 +63,8 @@ background-size: 97%;
 background-position: center 0;
 position: absolute;
 }
-/* Devise Email 
+
+/* Devise Email */
 #user_email, #user_password, #user_password_confirmation{
 padding: 5px 35px 0 0;
 margin-bottom: 10px;

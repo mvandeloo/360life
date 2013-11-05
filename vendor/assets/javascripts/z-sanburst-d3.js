@@ -1,6 +1,6 @@
 
-var width = 600,
-    height = 600,
+var width = 800,
+    height = 800,
     radius = Math.min(width, height) / 2;
 
 var x = d3.scale.linear()
@@ -41,6 +41,9 @@ d3.json(window.location + ".json", function(error, root) {
 
   function click(d) {
     console.log(d.name);
+    $.get('/blah/', function(data) {
+      
+    })
 
   //alert("You chose:" +d.name);
     path.transition()

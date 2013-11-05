@@ -4,30 +4,14 @@ describe 'section goals' do
   			end
 
 it 'should show a form for creating goals for every section'  do
-				visit new_wheel_path			
-					page.all(:css, '.question').each do |q|
-						within q do
-							choose 'Strongly agree'
-						end
-					end
-				
-				page.find('.homeButton').click
-				visit new_section_goal_path(section = 9)
-				expect(page).to have_css '.set_goal'		
+				visit new_section_goal_path(Section.last)
+				expect(page).to have_css '.new_goal'		
 			end	
 
 it 'should raise an error if the goal has no name'  do
-				visit new_wheel_path			
-					page.all(:css, '.question').each do |q|
-						within q do
-							choose 'Strongly agree'
-						end
-					end
-				
-				page.find('.homeButton').click
-				visit new_section_goal_path(section = 9)
+				visit new_section_goal_path(Section.last)
 				click_button 'Create Goal'
-				expect(page).to have_css '.set_goal'		
+				expect(page).to have_css '.new_goal'		
 			end	
 
 end

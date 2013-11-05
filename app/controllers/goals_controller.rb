@@ -1,5 +1,8 @@
 class GoalsController < ApplicationController
 
+
+before_filter :authenticate_user!, only: [:index] 
+
 	def index
     	@goals = Goal.all
   	end

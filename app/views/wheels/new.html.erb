@@ -3,6 +3,10 @@
 	<button class='random'>Random answers</button>
 <% end %>
 
+<% if flash[:error] -%>
+      <%= flash[:error] %>
+<% end -%>
+
 <%= form_for @wheel do |f| %>
 
 	<div id="accordion">
@@ -29,8 +33,5 @@
   	
   	<%= f.button "Create My Wheel", :class => "homeButton" %>
 
-	<% if flash[:error] -%>
-	      <%= flash[:error] %>
-	<% end -%>
 
 <% end %>

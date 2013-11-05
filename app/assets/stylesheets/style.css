@@ -44,8 +44,20 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
 /* D3 */
 #sunburst {
     position: relative;
+    background: url('/assets/Wheel-Final.png');
+    background-repeat: no-repeat;
+    background-size: 69%;
+    background-position-x: 129px;
+    background-position-y: 73px;
 }
-.wheel_back{
+
+#sunburst svg {
+    margin-left: 160px;
+    padding-top: 100px;
+    opacity: 0.75;
+    padding-bottom: 100px;
+}
+/*.wheel_back{
     left: -5px;
     top: -5px;
     width: 910px;
@@ -53,7 +65,7 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
     background-image:url("/assets/wheel_of_life.png");
     position: absolute;
     z-index: -1;
-}
+}*/
 /* Devise Email */
 #user_email, #user_password, #user_password_confirmation{
 padding: 5px 35px 0 0;

@@ -40,7 +40,7 @@ d3.json(window.location + ".json", function(error, root) {
       .on("click", click);
 
   function click(d) {
-    console.log(d.name);
+    $('.set_goal a[data-section-id="' + d.id + '"]').click();
 
   //alert("You chose:" +d.name);
     path.transition()

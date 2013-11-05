@@ -321,3 +321,6 @@ ul.nav, .nav ul {
     border-color: transparent;
 }
 
+.hidden {
+    display: none;
+}

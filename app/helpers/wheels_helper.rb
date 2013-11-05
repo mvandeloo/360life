@@ -1,8 +1,8 @@
 module WheelsHelper
-	def nest(count, hash, name, size="1")
+	def nest(count, hash, name, section_id,size="1")
 		nested = hash
 		1.upto(count) do |n|
-			opts = {name: name, size: size}
+			opts = {name: name, size: size, id: section_id}
 			opts[:children] = [nested] unless nested.empty?
 
 			nested = hash.merge(opts)
@@ -18,7 +18,7 @@ module WheelsHelper
 		children << nest(max_score, {}, "referance", "0.01")
 
 		wheel.answers.group_by(&:section).each do |section, answers|
-			children << nest(answers.map(&:answer_value).sum, {}, section.section_name)
+			children << nest(answers.map(&:answer_value).sum, {}, section.section_name, section.id)
 		end
 
 		{ name: 'Wheel of life', children: children }

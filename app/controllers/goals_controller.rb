@@ -14,12 +14,19 @@ class GoalsController < ApplicationController
     	@goal = Goal.new(params[:goal].permit(:title, :due_date, :notes, :priority))
     	@goal.section = @section
       
-	    if @goal.save!
-	      	redirect_to goals_path
-	    else
-	    	flash.now[:error] = @goal.errors.full_messages.inspect
-	    	render 'new'
-	    end
+      if params[:due_date].nil? || params[:title].nil?
+        flash[:error] = 'Please fill out Due Date and answers'
+        render 'new', :remote => true
+      else @goal.save!
+        redirect_to goals_path
+      end
+
+	    # if @goal.save!
+	    #   	redirect_to goals_path
+	    # else
+	    # 	flash.now[:error] = @goal.errors.full_messages.inspect
+	    # 	render 'new'
+	    # end
 	end
 
 	def edit

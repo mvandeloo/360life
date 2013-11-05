@@ -20,6 +20,16 @@ br {
 div {
     display: block;
 }
+h2 {
+    font-family: Helvetica Neue, Arial, sans-serif;
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+h3 {
+    padding: 0 0 15px 36px;
+    font-family: Helvetica Neue, Arial, sans-serif;
+    font-size: 20px;
+}
 .shadow {
 -moz-box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
 -webkit-box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
@@ -31,24 +41,40 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
     text-align:left;
     padding-left: 55px;
 } 
+/* D3 */
 #sunburst {
     position: relative;
+    background: url('/assets/Wheel-Final.png');
+    background-repeat: no-repeat;
+    background-size: 69%;
+    background-position-x: 129px;
+    background-position-y: 73px;
 }
-.wheel_back{
+
+#sunburst svg {
+    margin-left: 160px;
+    padding-top: 100px;
+    opacity: 0.75;
+    padding-bottom: 100px;
+}
+/*.wheel_back{
     left: -5px;
     top: -5px;
     width: 910px;
     height: 910px;
-    background-image:url('/assets/wheel_of_life.png');
+    background-image:url("/assets/wheel_of_life.png");
     position: absolute;
     z-index: -1;
-}
-/*#logoback {
-    padding-top: 12px;
-    background-color: #ff7700;
-    border-radius: 20px 20px 20px 20px;
-    margin: 20px 0 15px 0;
 }*/
+/* Devise Email */
+#user_email, #user_password, #user_password_confirmation{
+padding: 5px 35px 0 0;
+margin-bottom: 10px;
+margin-top: 1px;
+font-size: 12px;
+}
+
+/* Logo */
 #logo {
     float: left;
 }
@@ -86,11 +112,6 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
     margin-left: 7px;
     display: inline-block;
     width: 380px;
-}
-h3 {
-    padding: 0 0 15px 36px;
-    font-family: Helvetica Neue, Arial, sans-serif;
-    font-size: 20px;
 }
 .clear {
     clear: both;
@@ -145,6 +166,18 @@ h3 {
     position:relative;
     top:1px;
 }
+#deviseButton {
+    margin: 8px 0 20px 0;
+    padding: 3px 53px 3px 53px;
+}
+#deviseButtonPassword {
+    margin: 8px 0 20px 0;
+    padding: 7px 10px 7px 10px;
+    font-size: 14px;
+}
+.field_with_errors{
+    padding-top: -60px;
+}
 /* Form */
 .question{
     font-size: 14px;
@@ -198,7 +231,7 @@ h3 {
     text-decoration:none;
 }
 /* Navbar */
-/* Some stylesheet reset */
+/* Stylesheet reset */
 ul.nav, .nav ul {
     list-style: none;
     margin: 0;
@@ -206,7 +239,7 @@ ul.nav, .nav ul {
     vertical-align: baseline;
     line-height: 1;
 }
-/* The container */
+/* The nav container */
 .nav {
     display: block;
     position: relative;
@@ -239,7 +272,7 @@ ul.nav, .nav ul {
     background: -moz-linear-gradient(bottom, #0382c7, #06344d); 
     -webkit-transition: background .2s linear;
 }
-/* The main menu links */
+/* Main menu links */
 .nav>li>a {
     border-right: 1px dotted #0382c7;
     border-left: 1px dotted #0382c7;
@@ -256,7 +289,7 @@ ul.nav, .nav ul {
     border-bottom-right-radius: 4px;
     border-right: 0;
 }
-/* The hover state of the menu/submenu links */
+/* The hover state */
 .nav>li>a:hover, .nav>li:hover>a, .nav ul li a:hover, .nav ul li:hover>a {
     color: #fff;
     text-shadow: 0 1px 0 rgba(0, 0, 0, .3);

@@ -1,11 +1,13 @@
-
-
-<%= form_for [@section, @goal] do |f| %>
  <h1>Set goal for <%= @section.section_name %></h1><br>
 
- <% if flash[:error] -%>
- 	<%= flash[:error] %>
+ <% if @goal.errors.any? -%>
+ 	<% @goal.errors.full_messages.each do |message| %>
+ 		<%= message %><br>
+ 	<% end %>
 <% end -%>
+
+<%= form_for [@section, @goal], remote: :true do |f| %>
+
   <%= f.label :title %><br>
   <%= f.text_field :title, placeholder: 'Goal title' %><br>
   <%= f.label :notes %><br>

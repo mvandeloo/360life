@@ -34,14 +34,14 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
 #sunburst {
     position: relative;
 }
-.wheel_back{
-    left: -5px;
-    top: -5px;
-    width: 910px;
-    height: 910px;
-    background-image:url('/assets/wheel_of_life.png');
-    position: absolute;
-    z-index: -1;
+.wheel_back {
+left: -64px;
+top: -15px;
+width: 710px;
+height: 710px;
+background-image: url('/assets/Wheel-Final.png');
+position: absolute;
+z-index: -1;
 }
 /*#logoback {
     padding-top: 12px;

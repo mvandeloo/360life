@@ -1,7 +1,7 @@
 
-<%= @goal.section_id %>
-<%= form_for [@section, @goal] do |f| %>
 
+<%= form_for [@section, @goal] do |f| %>
+ <h1>Set goal for <%= @section.section_name %></h1><br>
   <%= f.label :title %><br>
   <%= f.text_field :title, placeholder: 'Goal title' %><br>
   <%= f.label :notes %><br>

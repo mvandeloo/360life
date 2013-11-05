@@ -5,13 +5,13 @@ describe 'section goals' do
 
 it 'should show a form for creating goals for every section'  do
 				visit new_section_goal_path(Section.last)
-				expect(page).to have_css '.set_goal'		
+				expect(page).to have_css '.new_goal'		
 			end	
 
 it 'should raise an error if the goal has no name'  do
 				visit new_section_goal_path(Section.last)
 				click_button 'Create Goal'
-				expect(page).to have_css '.set_goal'		
+				expect(page).to have_css '.new_goal'		
 			end	
 
 end

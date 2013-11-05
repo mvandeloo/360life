@@ -33,8 +33,20 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
 } 
 #sunburst {
     position: relative;
+    background: url('/assets/Wheel-Final-4.png');
+    background-repeat: no-repeat;
+    background-size: 69%;
+    background-position-x: 129px;
+    background-position-y: 73px;
 }
-.wheel_back {
+
+#sunburst svg {
+    margin-left: 155px;
+    padding-top: 100px;
+    opacity: 0.85;
+    padding-bottom: 100px;
+}
+./*wheel_back {
 left: -64px;
 top: -15px;
 width: 710px;
@@ -42,7 +54,7 @@ height: 710px;
 background-image: url('/assets/Wheel-Final.png');
 position: absolute;
 z-index: -1;
-}
+}*/
 /*#logoback {
     padding-top: 12px;
     background-color: #ff7700;
@@ -263,3 +275,4 @@ ul.nav, .nav ul {
     background: #aed32a;
     border-color: transparent;
 }
+

@@ -45,7 +45,7 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
 #sunburst {
     position: relative;
 
-    background: url('/assets/Wheel-Final.png');
+    background-image: url('/assets/Wheel-Final.png');
 
     background-repeat: no-repeat;
     background-size: 69%;

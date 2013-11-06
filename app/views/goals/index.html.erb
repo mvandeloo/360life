@@ -8,5 +8,8 @@
   </tr>
 <% end %>
 
-<%= link_to 'show wheel', wheel_path(current_user), :class => "homeButton" %>
-
+<% if current_user.wheel.nil? %>
+<%= link_to 'Create Wheel', new_wheel_path, :class => "homeButton" %>
+<% else %>
+<%= link_to 'Show Wheel', wheel_path(current_user), :class => "homeButton" %>
+<% end %>

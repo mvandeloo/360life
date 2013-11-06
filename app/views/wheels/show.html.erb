@@ -12,5 +12,7 @@
 <div id="sunburst">
 	<div class="wheel_back"></div>
 </div>
-<%= link_to 'save wheel', new_user_registration_path, :class => "homeButton" %>
+<% unless current_user %>
+	<%= link_to 'save wheel', new_user_registration_path, :class => "homeButton" %>
+<% end %>
 <%= javascript_include_tag 'z-sanburst-d3' %>

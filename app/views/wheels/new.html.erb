@@ -3,9 +3,11 @@
 	<button class='random'>Random answers</button>
 <% end %>
 
-<% if flash[:error] -%>
-      <%= flash[:error] %>
-<% end -%>
+<div class="error_format">
+	<% if flash[:error] = "Please fill in all the answers below."-%>
+	      <%= flash[:error] %>
+	<% end -%>
+</div>
 
 <%= form_for @wheel do |f| %>
 

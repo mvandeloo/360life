@@ -13,9 +13,9 @@
   <%= f.label :notes %><br>
   <%= f.text_field :notes, placeholder: 'Notes' %><br>
   <%= f.label(:due_date) %><br>
-  <%= f.date_field(:due_date) %><br>
+  <%= f.text_field(:due_date) %><br>
   <%= f.label :priority %><br>
-  <%= f.select(:priority, [['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]]) %><br>
+  <%= f.select(:priority, [['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]], include_blank: 'Please select') %><br>
   <%= f.submit %>
 <% end %>
  

@@ -4,9 +4,7 @@
 <% end %>
 
 <div class="error_format">
-	<% if flash[:error] = "Please fill in all the answers below."-%>
-	      <%= flash[:error] %>
-	<% end -%>
+	<%= flash[:error] %>
 </div>
 
 <%= form_for @wheel do |f| %>

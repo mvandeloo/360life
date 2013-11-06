@@ -1,0 +1,9 @@
+<% users.goals.each do |goal| %>
+  <tr>
+    <td>-Title:<%= goal.title %></td>
+    <td>Section:<%= goal.section.section_name %></td>
+    <td><%= goal.due_date %></td>
+    <td><%= link_to 'Edit', edit_section_goal_path(goal.section, goal) %></td>
+    <td><%= link_to 'Destroy', [goal.section, goal], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>

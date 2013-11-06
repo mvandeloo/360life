@@ -50,8 +50,7 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
 /* D3 */
 #sunburst {
     position: relative;
-/*    background-image: url('/assets/Wheel-Final.png');
-*/    background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-size: 90%;
     text-align: center;
 }

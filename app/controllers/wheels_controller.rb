@@ -24,7 +24,7 @@ class WheelsController < ApplicationController
 
     # raise params[:answer].inspect
     if params[:answer].nil? || (params[:answer].length < Question.all.count)
-      flash[:error] = 'Please fill out all the answers.'
+      flash[:error] = 'Please fill out all the answers below.'
       render 'new'
     else
       # @user = User.find(params[:user_id])

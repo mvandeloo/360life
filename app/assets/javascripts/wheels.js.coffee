@@ -4,9 +4,9 @@
 
 
 fillQuestionnaire = ->
-	i = 33
+	i = 1
 
-	while i < 65
+	while i < 34
 		random = Math.floor(Math.random()*5);
 
 		$("input[name='answer[" + i + "]']").eq(random).prop('checked', true)

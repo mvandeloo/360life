@@ -5,8 +5,8 @@
 .section-status {
 	display: none;
 	width: 20px;
-	padding-left:710px;
-	text-align:right;
+	position: absolute;
+	right: 30px;
 }
 
 .section-status.done {

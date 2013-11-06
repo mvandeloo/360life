@@ -15,7 +15,7 @@ LifeApp::Application.routes.draw do
 
   root :to => "static#homepage"
 
-  # get '/about' => 'static#about'
+  get '/help' => 'static#help'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

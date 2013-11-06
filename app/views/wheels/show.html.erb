@@ -1,4 +1,7 @@
-"Your personal wheel"
+<br>
+<div id="home_text"> 
+	Simply click on any sector of the wheel in order to set goals for that particular area of your life. For help with setting goals and effectively using your wheel please <%= link_to "click here.", help_path, :remote => true %>
+</div>
 
 <div class='hidden'>
 	<% @wheel.answers.group_by(&:section).each do |section, answers| %>

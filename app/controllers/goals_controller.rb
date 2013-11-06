@@ -4,7 +4,10 @@ before_filter :authenticate_user!, only: [:index]
  
 
 	def index
-    	@goals = Goal.all
+      user = User.find(current_user.id)
+      # @goals = Goal.all
+      raise user.wheel.inspect
+    	@goals = user.wheel.goals
   	end
 
   	def new
@@ -13,9 +16,12 @@ before_filter :authenticate_user!, only: [:index]
 	end
 
 	def create
-		@section = Section.find params[:section_id]
+		  @section = Section.find params[:section_id]
     	@goal = Goal.new(params[:goal].permit(:title, :due_date, :notes, :priority))
-    	@goal.section = @section
+      @goal.section = @section
+    	@goal.wheel_id = session[:wheel_id]
+      user = User.find(current_user.id)
+      @goal.user = current_user
       
       # if @goal.save
       # else

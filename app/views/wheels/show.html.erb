@@ -1,9 +1,5 @@
 "Your personal wheel"
 
-<<<<<<< HEAD
-=======
-
->>>>>>> d1a724be905da7f60a2d1cee486f8a43dd70b2a8
 <div class='hidden'>
 	<% @wheel.answers.group_by(&:section).each do |section, answers| %>
 		<%= section.section_name %><br>
@@ -12,10 +8,6 @@
 		<% section_sum = answers.map(&:answer_value).sum %><br>
 	<% end %>
 </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> d1a724be905da7f60a2d1cee486f8a43dd70b2a8
 
 <div id="sunburst">
 	<div class="wheel_back"></div>

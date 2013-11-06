@@ -1,6 +1,5 @@
 "Your personal wheel"
 
-<<<<<<< HEAD
 <div class='hidden'>
 	<% @wheel.answers.group_by(&:section).each do |section, answers| %>
 		<%= section.section_name %><br>
@@ -11,15 +10,6 @@
 		section percent is  <%= section_percent.to_i %>
 	<% end %>
 </div>
-=======
-<% @wheel.answers.group_by(&:section).each do |section, answers| %>
-	<%= section.section_name %><br>
-	<span class="set_goal"> <%= link_to 'set goal', new_section_goal_path(section), :remote => true %></span>
-	<%= answers.map(&:answer_value).inspect %><br>
-	<% section_sum = answers.map(&:answer_value).sum %><br>
-	
-<% end %>
->>>>>>> b4adf9ca75465b16a66363e11d6005e9b7fa3231
 
 <div id="sunburst">
 	<div class="wheel_back"></div>

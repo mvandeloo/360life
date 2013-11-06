@@ -1,3 +1,14 @@
 // Place all the styles related to the questions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.ui-state-default {
+	background-color:white;
+	opacity:0.9;
+}
+
+.ui-accordion-header-active {
+	background-color:#D8D8DC;
+	opacity:0.9;
+}

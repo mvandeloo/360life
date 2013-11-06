@@ -11,6 +11,7 @@ $ ->
       .css('top', $(window).scrollTop() + 40)
       .show()
     $modal_container.show();
+    $( "#goal_due_date" ).datepicker(dateFormat: 'yy-mm-dd')
  
   $(document).on 'click', '#modal .close', ->
     $modal_container.hide()

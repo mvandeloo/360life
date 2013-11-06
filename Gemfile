@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'pg'
 
+gem 'rails_12factor', group: :production
+
 group :development, :test do
 	gem 'rspec-rails','~>2.0'
 	gem 'capybara'

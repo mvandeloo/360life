@@ -1,12 +1,15 @@
 <% @goals.each do |goal| %>
   <tr>
-    <td>-Title:<%= goal.title %></td>
-    <td>Section:<%= goal.section.section_name %></td>
-    <td><%= goal.due_date %></td>
+    <td>Title:<%= goal.title %></td><br>
+    <td>Section:<%= goal.section.section_name %></td><br>
+    <td>Due Date:<%= goal.due_date %></td><br>
     <td><%= link_to 'Edit', edit_section_goal_path(goal.section, goal) %></td>
-    <td><%= link_to 'Destroy', [goal.section, goal], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Delete', [goal.section, goal], method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 
-<%= link_to 'show wheel', wheel_path(current_user), :class => "homeButton" %>
-
+<% if current_user.wheel.nil? %>
+<%= link_to 'Create Wheel', new_wheel_path, :class => "homeButton" %>
+<% else %>
+<%= link_to 'Show Wheel', wheel_path(current_user), :class => "homeButton" %>
+<% end %>

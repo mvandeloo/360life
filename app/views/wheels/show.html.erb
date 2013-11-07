@@ -1,4 +1,7 @@
-"Your personal wheel"
+<br>
+<div id="home_text"> 
+	Click on a sector of the wheel to set goals for that particular area of your life. For help with setting goals and effectively using your personalized wheel, please <%= link_to "click here for more.", help_path, :remote => true %>
+</div>
 
 <div class='hidden'>
 	<% @wheel.answers.group_by(&:section).each do |section, answers| %>
@@ -12,5 +15,9 @@
 <div id="sunburst">
 	<div class="wheel_back"></div>
 </div>
-<%= link_to 'save wheel', new_user_registration_path, :class => "homeButton" %>
+
+
+<% link_to 'Save My Wheel', new_user_registration_path, :class => "homeButton" %>
+<% unless current_user %>
+<% end %>
 <%= javascript_include_tag 'z-sanburst-d3' %>

@@ -11,9 +11,12 @@ class ApplicationController < ActionController::Base
 
   # Devise: Where to redirect users once they have logged in
   def after_sign_in_path_for(user)
-  	wheel = Wheel.find(session[:wheel_id])
-  	wheel.update_attribute(:user_id,user.id)
-    goals_path
+    if session[:wheel_id].nil?
+      wheel_new_path
+    else
+    	user.wheel_from_session
+      goals_path
+    end
   end
 
 end

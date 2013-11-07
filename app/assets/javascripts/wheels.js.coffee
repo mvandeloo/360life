@@ -14,3 +14,4 @@ fillQuestionnaire = ->
 
 $ ->
 	$('.random').on 'click', fillQuestionnaire
+	$('svg').tooltip track: true

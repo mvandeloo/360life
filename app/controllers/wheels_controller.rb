@@ -25,7 +25,7 @@ class WheelsController < ApplicationController
 
     # raise params[:answer].inspect
     if params[:answer].nil? || (params[:answer].length < Question.all.count)
-      flash[:error] = 'Please fill out all the answers below.'
+      flash[:error] = 'Please fill out all answers below.'
       render 'new'
     else
       # @user = User.find(params[:user_id])
@@ -41,7 +41,12 @@ class WheelsController < ApplicationController
       # @wheel = @user.wheels.build params[:wheel].permit(:answer_id)
       
       if @wheel.save
-        session[:wheel_id] = @wheel.id
+        if current_user
+          current_user.wheel = @wheel
+        else
+          session[:wheel_id] = @wheel.id
+        end
+
         redirect_to @wheel
       else
         flash.now[:error] = @wheel.errors.full_messages.inspect

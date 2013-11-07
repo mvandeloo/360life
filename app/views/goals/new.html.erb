@@ -21,11 +21,12 @@
  <%= f.select(:priority, [['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]], include_blank: 'Please select', class: "goal_priority") %><br></br>
   <%= f.submit class: "goal_button"%>
 <% end %>
- 
-<%= @goals.each do |goal| %>
+<br>
+<b>How about setting one of those goals?</b><br>
+<% @suggestions.each do |suggestion| %>
 	<tr>
-		<td><%= goal.suggestion.title %></td>
+		<td class='suggestion'><%= suggestion.title %></td><br>
 	</tr>
-	<% end %>
+<% end %>
 
 

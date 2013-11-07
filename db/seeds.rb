@@ -26,14 +26,14 @@ work.questions.create([{question: 'I enjoy my work.'}, {question: 'I see opportu
 family.questions.create([{question: 'I feel valued, understood and respected by my family members.'}, {question: 'I often spend quality time with my family.'}, {question: 'My friends and I are highly compatible.'},  {question: 'I have a sufficient number of close friends who are trustworthy, dependable and honest.'}])
 
 
-environment.suggestions.create([{suggestion: 'Clean out your closet and donate some items to charity'}, {suggestion: 'Get organized'}, {suggestion: 'Take inventory in your home and if you haven’t used an item for more than a year then throw or give it away'}, {suggestion: 'Fix or dispose of items that are broken or aged.'}])
-health.suggestions.create([{suggestion: 'Drink more water'}, {suggestion: 'Eat 2-3 servings of fruit and vegetables a day'}, {suggestion: 'Skip desert'},  {suggestion: 'Take the stairs'}])
-finance.suggestions.create([{suggestion: 'Create a budget'}, {suggestion: 'Pay off debt'}, {suggestion: 'Have only one credit card in your possession'},  {suggestion: 'Aim to build up savings over time'}])
-growth.suggestions.create([{suggestion: 'Read a book on a personal subject of choice'}, {suggestion: 'Read a book on a subject that you are totally unfamiliar with'}, {suggestion: 'Read Books on Personal Growth and Motivation'},  {suggestion: 'Write articles or guest blog posts.'}])
-recreation.suggestions.create([{suggestion: 'Make time to persue a skill or hobby you enjoy'}, {suggestion: 'Make an effort'}, {suggestion: 'Make time to persue a skill or hobby you enjoy'},  {suggestion: 'Find activities in your local community'}])
-relationship.suggestions.create([{suggestion: 'Make a list of everything you appreciate, admire or love about your partner and have them do the same'}, {suggestion: 'Spend quality time together on a regular basis'}, {suggestion: 'Try a new activity together'},  {suggestion: 'Give your partner a pleasant surprise'}])
-work.suggestions.create([{suggestion: 'Keep calm'}])
-family.suggestions.create([{suggestion: 'Keep calm'}])
+environment.suggestions.create([{title: 'Clean out your closet and donate some items to charity'}, {title: 'Get organized'}, {title: 'Take inventory in your home and if you haven’t used an item for more than a year then throw or give it away'}, {title: 'Fix or dispose of items that are broken or aged.'}])
+health.suggestions.create([{title: 'Drink more water'}, {title: 'Eat 2-3 servings of fruit and vegetables a day'}, {title: 'Skip desert'},  {title: 'Take the stairs'}])
+finance.suggestions.create([{title: 'Create a budget'}, {title: 'Pay off debt'}, {title: 'Have only one credit card in your possession'},  {title: 'Aim to build up savings over time'}])
+growth.suggestions.create([{title: 'Read a book on a personal subject of choice'}, {title: 'Read a book on a subject that you are totally unfamiliar with'}, {title: 'Read Books on Personal Growth and Motivation'},  {title: 'Write articles or guest blog posts.'}])
+recreation.suggestions.create([{title: 'Make time to persue a skill or hobby you enjoy'}, {title: 'Make an effort'}, {title: 'Make time to persue a skill or hobby you enjoy'},  {title: 'Find activities in your local community'}])
+relationship.suggestions.create([{title: 'Make a list of everything you appreciate, admire or love about your partner and have them do the same'}, {title: 'Spend quality time together on a regular basis'}, {title: 'Try a new activity together'},  {title: 'Give your partner a pleasant surprise'}])
+work.suggestions.create([{title: 'Keep calm'}])
+family.suggestions.create([{title: 'Keep calm'}])
 
 
 

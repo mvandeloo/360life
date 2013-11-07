@@ -13,9 +13,10 @@ class GoalsController < ApplicationController
     	
   	end
 
-  	def new
+  def new
   		@section = Section.find params[:section_id]
-   		@goal = Goal.new
+      @suggestions = @section.suggestions
+      @goal = Goal.new
 	end
 
 	def create

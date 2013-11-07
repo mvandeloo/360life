@@ -164,8 +164,6 @@ position: absolute;
     margin: 8px 0 20px 0;
     padding: 3px 53px 3px 53px;
 }
-
-
 #deviseButtonPassword {
     margin: 8px 0 20px 0;
     padding: 7px 10px 7px 10px;
@@ -182,15 +180,15 @@ position: absolute;
     margin-bottom: 20px;
 }
 .goal_button {
-    font: 64px Arial, Helvetica, sans-serif;
-    height: 30px;
-    width: 140px;
+    font: 18px Arial, Helvetica, sans-serif;
+    margin-left: 0;
+    padding: 8px 60px;
     line-height: 28px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-#modal #deviseButton, .goal_button {
+#modal #deviseButton {
     height:40px;
     width:220px;
     margin: 8px 0 20px 0;
@@ -428,6 +426,16 @@ ul.nav, .nav ul {
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#e1e1e1", endColorstr="#e1e1e1");  background: -o-linear-gradient(top,#e1e1e1,e1e1e1);
 
     background-color:#e1e1e1;
+}
+
+.suggestion {
+list-style-type: circle;
+border: 1px solid gray;
+padding: 17px 30px;
+}
+
+.suggestion li{
+    list-style: initial;
 }
 /*.GoalsTable tr:first-child td:first-child{
     border-width:0px 0px 1px 0px;

@@ -19,14 +19,17 @@
   <%= f.text_field(:due_date) %><br>
   <%= f.label :priority %><br>
  <%= f.select(:priority, [['1', 1], ['2', 2], ['3', 3], ['4', 4], ['5', 5]], include_blank: 'Please select', class: "goal_priority") %><br></br>
-  <%= f.submit class: "goal_button"%>
+  <%= f.submit class: "goal_button" %>
 <% end %>
 <br>
-<b>How about setting one of those goals?</b><br>
-<% @suggestions.each do |suggestion| %>
-	<tr>
-		<td class='suggestion'><%= suggestion.title %></td><br>
-	</tr>
-<% end %>
+<br>
 
+<div class='suggestion'>
+<b>How about setting one of those goals?</b><br>
+<ul>
+<% @suggestions.each do |suggestion| %>
+		<li><%= suggestion.title %></li>
+<% end %>
+</ul>
+</div>
 

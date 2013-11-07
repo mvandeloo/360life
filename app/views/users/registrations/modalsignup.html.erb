@@ -1,10 +1,7 @@
-<h2>Sign up
-	<span class='add-goal'>to add a goal</span>
-</h2>
+<h2>Please sign up to save your goal</h2>
 
-<%= form_for(resource, :as => :user, :url => registration_path(:user), remote: true) do |f| %>
+<%= form_for(User.new, :as => :user, :url => registration_path(:user), remote: true) do |f| %>
   <%= devise_error_messages! %>
-  
   <div><%= f.label :email %><br />
   <%= f.email_field :email, :autofocus => true %></div>
 

@@ -5,7 +5,6 @@ Project to move a popular paper-based tool (the wheel of life) as used by life c
 
 ![alt text](https://s3.amazonaws.com/Github-14/360Life.png “Wheel of Life - Ruby on Rails")
 ![alt text](https://s3.amazonaws.com/360Life/360Life.png “Wheel of Life - Ruby on Rails")
-https://s3.amazonaws.com/360Life/360Life.png
 
 Functionality:
 - Generate data driven document (wheel of life) from user answered  questionnaire
@@ -27,3 +26,4 @@ Technologies:
 - CSS3
 - User login (Devise)
 - Photoshop
+- Illustrator

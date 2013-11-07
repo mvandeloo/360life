@@ -8,6 +8,7 @@ class WheelsController < ApplicationController
 	def new
     @page = 'questionnaire'
    	@wheel = Wheel.new
+    session[:wheel_id] = nil
     # @wheel.build_answers
 	end
 	

@@ -14,7 +14,7 @@ var color = d3.scale.category20c();
 var svg = d3.select("#sunburst").append("svg")
     .attr("width", width)
     .attr("height", height)
-    .attr("title", "Click on a sector to add goal!")
+    .attr("title", "Click on a wheel sector to add goal!")
     .append("g")
     .attr("transform", "translate(" + width / 2 + "," + (height / 2) + ")");
 

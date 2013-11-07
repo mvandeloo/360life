@@ -142,6 +142,7 @@ position: absolute;
     border-radius:8px;
     
     display:inline-block;
+    cursor: pointer;
     color:#ffffff;
     font-family:arial;
     font-size:24px;
@@ -333,6 +334,6 @@ ul.nav, .nav ul {
 .nav>li>a:hover, .nav>li:hover>a, .nav ul li a:hover, .nav ul li:hover>a {
     color: #fff;
     text-shadow: 0 1px 0 rgba(0, 0, 0, .3);
-    background: #aed32a;
+    background: #9bbc26;
     border-color: transparent;
 }

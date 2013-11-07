@@ -1,8 +1,7 @@
 <div class ="goals_titletext"> 
-	<%= @section.section_name %>
+	 Set goal for "<%= @section.section_name %>"
 </div>
  
- <h1>Set goal for "<%= @section.section_name %>"</h1><br>
 
  <% if @goal.errors.any? -%>
  	<% @goal.errors.full_messages.each do |message| %>

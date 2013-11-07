@@ -14,6 +14,12 @@ body {
     line-height: 16px;
     text-align: center;
 }
+#container {
+    margin: 0 auto;
+    width: 1050px;
+    text-align:left;
+    padding-left: 55px;
+} 
 br {
     clear: both;
 }
@@ -30,23 +36,11 @@ h3 {
     font-family: Helvetica Neue, Arial, sans-serif;
     font-size: 20px;
 }
-.error_format {
-    font-family: Helvetica Neue, Arial, sans-serif;
-    font-size: 16px;
-    color: red;
-    padding-bottom: 15px;
-}
 .shadow {
 -moz-box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
 -webkit-box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
 box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
 }
-#container {
-    margin: 0 auto;
-    width: 1050px;
-    text-align:left;
-    padding-left: 55px;
-} 
 /* D3 */
 #sunburst {
     position: relative;
@@ -60,11 +54,9 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
     padding-top: 68px;
     margin-bottom: 40px;
 }
-
 #sunburst path {
     cursor: pointer;
 }
-
 .wheel_back {
 width: 100%;
 height: 1000px ;
@@ -73,14 +65,6 @@ background-repeat: no-repeat;
 background-size: 97%;
 background-position: center 0;
 position: absolute;
-}
-
-/* Devise Email */
-#user_email, #user_password, #user_password_confirmation{
-padding: 5px 35px 0 0;
-margin-bottom: 10px;
-margin-top: 1px;
-font-size: 12px;
 }
 /* Logo */
 #logo {
@@ -104,10 +88,6 @@ font-size: 12px;
     line-height: 16px;
     margin: 30px 0 30px 0;
     clear:left;
-}
-.questionnaire #main {
-    padding-left: 0;
-    padding-right: 0;
 }
 #content_left {
     float: left;
@@ -143,9 +123,6 @@ font-size: 12px;
     line-height: 20px;
     color: #767f84;
     margin-bottom: 5px;
-}
-#quiz_text {
-    padding-left: 50px;
 }
 .help_text {
     font: 12px Arial, Helvetica, sans-serif;
@@ -210,7 +187,21 @@ font-size: 12px;
     font-weight: bold;
     margin-bottom: 20px;
 }
-/* Form */
+/* Question Form */
+.questionnaire #main {
+    padding-left: 0;
+    padding-right: 0;
+}
+#quiz_text {
+    padding-left: 50px;
+}
+.error_format {
+    font-family: Helvetica Neue, Arial, sans-serif;
+    font-size: 16px;
+    color: red;
+    padding-bottom: 15px;
+    padding-left: 50px;
+}
 .question{
     font-size: 14px;
     display: inline-block;
@@ -230,6 +221,23 @@ font-size: 12px;
     margin-top: 20px;
     width: 150px;
     height: 35px;
+}
+/* Modal form display */
+.hidden {
+    display: none;
+}
+.add-goal {
+    display: none
+}
+#modal .add-goal {
+    display: inline;
+}
+/* Devise Email */
+#user_email, #user_password, #user_password_confirmation{
+padding: 5px 35px 0 0;
+margin-bottom: 10px;
+margin-top: 1px;
+font-size: 12px;
 }
 /* Footer */
 #footer{
@@ -327,16 +335,4 @@ ul.nav, .nav ul {
     text-shadow: 0 1px 0 rgba(0, 0, 0, .3);
     background: #aed32a;
     border-color: transparent;
-}
-
-.hidden {
-    display: none;
-}
-
-.add-goal {
-    display: none
-}
-
-#modal .add-goal {
-    display: inline;
 }

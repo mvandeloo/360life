@@ -142,6 +142,7 @@ position: absolute;
     border-radius:8px;
     
     display:inline-block;
+    cursor: pointer;
     color:#ffffff;
     font-family:arial;
     font-size:24px;

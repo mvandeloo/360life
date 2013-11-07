@@ -1,7 +1,7 @@
 class GoalsController < ApplicationController
 
-before_filter :auth_user, only: [:index] 
- 
+# before_filter :auth_user, only: [:index] 
+  helper_method :resource
 
 	def index
       # @goals = Goal.all
@@ -27,7 +27,11 @@ before_filter :auth_user, only: [:index]
       # end
 
 	    if @goal.save
-	      render js: "window.location = '#{ goals_path }'"
+        if user_signed_in?
+  	      render js: "window.location = '#{ goals_path }'"
+        else
+          render 'users/registrations/new'
+        end
 	    else
 	    	render 'new'
 	    end
@@ -60,8 +64,8 @@ before_filter :auth_user, only: [:index]
 
   private
 
-  def auth_user
-    redirect_to new_user_registration_path unless user_signed_in?
+  def resource
+    User.new
   end
 
 end

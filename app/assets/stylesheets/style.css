@@ -60,6 +60,11 @@ box-shadow: 10px 10px 8px rgba(137, 137, 137, 0.5);
     padding-top: 68px;
     margin-bottom: 40px;
 }
+
+#sunburst path {
+    cursor: pointer;
+}
+
 .wheel_back {
 width: 100%;
 height: 1000px ;
@@ -326,4 +331,12 @@ ul.nav, .nav ul {
 
 .hidden {
     display: none;
+}
+
+.add-goal {
+    display: none
+}
+
+#modal .add-goal {
+    display: inline;
 }

@@ -20,4 +20,6 @@
 <% link_to 'Save My Wheel', new_user_registration_path, :class => "homeButton" %>
 <% unless current_user %>
 <% end %>
-<%= javascript_include_tag 'z-sanburst-d3' %>
+<script type="text/javascript">
+	WheelOfLife.d3();
+</script>

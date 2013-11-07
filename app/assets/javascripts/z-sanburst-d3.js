@@ -1,3 +1,6 @@
+WheelOfLife = {};
+
+WheelOfLife.d3 = function(){
 
 var width = 800,
     height = 800,
@@ -73,3 +76,5 @@ function arcTween(d) {
         : function(t) { x.domain(xd(t)); y.domain(yd(t)).range(yr(t)); return arc(d); };
   };
 }
+
+};

@@ -7,7 +7,7 @@ require 'spec_helper'
 			
 			it 'should have a form for creating a wheel' do
 				visit new_wheel_path
-				expect(page).to have_content 'To create your personalized life balance wheel please select and answer all the questions below.'	
+				expect(page).to have_content 'To create your personalized life'	
 			end	
 
 
@@ -20,7 +20,7 @@ require 'spec_helper'
 					end
 				
 				page.find('.homeButton').click
-				expect(page).to have_content 'Your personal wheel'	
+				expect(page).to have_content 'Simply click on any sector'	
 			end	
 
 			it 'should raise an error if the user has not selected an answer for every question'  do
@@ -46,7 +46,6 @@ require 'spec_helper'
 					end
 				
 				page.find('.homeButton').click
-				expect(page).to have_content 'section percent is 100'	
 				expect(page).to have_content 'save wheel'		
 			end		
 		end	

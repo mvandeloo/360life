@@ -41,7 +41,12 @@ class WheelsController < ApplicationController
       # @wheel = @user.wheels.build params[:wheel].permit(:answer_id)
       
       if @wheel.save
-        session[:wheel_id] = @wheel.id
+        if current_user
+          current_user.wheel = @wheel
+        else
+          session[:wheel_id] = @wheel.id
+        end
+
         redirect_to @wheel
       else
         flash.now[:error] = @wheel.errors.full_messages.inspect

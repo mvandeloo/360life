@@ -12,7 +12,7 @@ Functionality:
 - Store and edit user wheel
 
 Technologies:
-- Rspec/ Capybara/ Shoulda database testing tools (Created both feature and model spec tests)
+- Testing tools: Rspec/ Capybara/ Shoulda  (Created feature, model spec and database tests)
 - Rails 4.0
 - Ruby 2.0
 - D3.js (Data-Driven Documents)

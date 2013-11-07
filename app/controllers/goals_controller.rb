@@ -44,6 +44,7 @@ class GoalsController < ApplicationController
 	end
 
 	def edit
+      @section = Section.find params[:section_id]
     	@goal = Goal.find(params[:id])
   	end
 

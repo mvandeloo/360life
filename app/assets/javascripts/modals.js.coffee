@@ -19,3 +19,11 @@ $ ->
     $modal.hide()
     $( "svg" ).tooltip( "option", "disabled", false );
     false
+
+  $('a[data-text]').on 'click', (e)->
+    $modal
+      .html($(this).data('text'))
+      .prepend($modal_close)
+      .css('top', $(window).scrollTop() + 40)
+      .show()
+    e.preventDefault()

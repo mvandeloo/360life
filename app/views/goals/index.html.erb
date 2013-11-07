@@ -32,7 +32,7 @@
 		<td><%= goal.title %></td>
 		<td><%= goal.priority %></td>
 		<td><%= goal.due_date %></td>
-		<td><%= goal.notes %></td>
+		<td><%= link_to truncate(goal.notes), '#', 'data-text' => goal.notes %></td>
 		<td><%= link_to 'Edit', edit_section_goal_path(goal.section, goal) %></td>
    		<td><%= link_to 'Delete', [goal.section, goal], method: :delete, data: { confirm: 'Are you sure?' } %></td>
 	</tr>

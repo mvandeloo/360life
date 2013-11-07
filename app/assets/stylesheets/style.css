@@ -3,7 +3,7 @@ html {
     width: 100%; 
     }
 body {
-    background: url("/assets/Background.png") no-repeat center center fixed;
+    background: url(<%=image_tag "Background.png"%>) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

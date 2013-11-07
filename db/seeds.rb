@@ -25,3 +25,23 @@ relationship.questions.create([{question: 'My partner listens to me and is sensi
 work.questions.create([{question: 'I enjoy my work.'}, {question: 'I see opportunity for growth and development in my position.'}, {question: 'I like my work environment and the people I with work.'},  {question: 'My work allows me to afford a good work-life balance.'}])
 family.questions.create([{question: 'I feel valued, understood and respected by my family members.'}, {question: 'I often spend quality time with my family.'}, {question: 'My friends and I are highly compatible.'},  {question: 'I have a sufficient number of close friends who are trustworthy, dependable and honest.'}])
 
+
+environment.suggestions.create([{suggestion: 'Clean out your closet and donate some items to charity'}, {suggestion: 'Get organized'}, {suggestion: 'Take inventory in your home and if you haven’t used an item for more than a year then throw or give it away'}, {suggestion: 'Fix or dispose of items that are broken or aged.'}])
+health.suggestions.create([{suggestion: 'Drink more water'}, {suggestion: 'Eat 2-3 servings of fruit and vegetables a day'}, {suggestion: 'Skip desert'},  {suggestion: 'Take the stairs'}])
+finance.suggestions.create([{suggestion: 'Create a budget'}, {suggestion: 'Pay off debt'}, {suggestion: 'Have only one credit card in your possession'},  {suggestion: 'Aim to build up savings over time'}])
+growth.suggestions.create([{suggestion: 'Read a book on a personal subject of choice'}, {suggestion: 'Read a book on a subject that you are totally unfamiliar with'}, {suggestion: 'Read Books on Personal Growth and Motivation'},  {suggestion: 'Write articles or guest blog posts.'}])
+recreation.suggestions.create([{suggestion: 'Make time to persue a skill or hobby you enjoy'}, {suggestion: 'Make an effort'}, {suggestion: 'Make time to persue a skill or hobby you enjoy'},  {suggestion: 'Find activities in your local community'}])
+relationship.suggestions.create([{suggestion: 'Make a list of everything you appreciate, admire or love about your partner and have them do the same'}, {suggestion: 'Spend quality time together on a regular basis'}, {suggestion: 'Try a new activity together'},  {suggestion: 'Give your partner a pleasant surprise'}])
+work.suggestions.create([{suggestion: 'Keep calm'}])
+family.suggestions.create([{suggestion: 'Keep calm'}])
+
+
+
+
+
+
+
+
+
+
+

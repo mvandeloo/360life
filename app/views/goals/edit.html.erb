@@ -1,6 +1,6 @@
 
 <%= @goal.section_id %>
-<%= form_for @goal do |f| %>
+<%= form_for [@section, @goal] do |f| %>
 
   <%= f.label :title %><br>
   <%= f.text_field :title, placeholder: 'Goal title' %><br>

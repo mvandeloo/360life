@@ -12,8 +12,10 @@ $ ->
       .show()
     $modal_container.show();
     $( "#goal_due_date" ).datepicker(dateFormat: 'yy-mm-dd')
+    $( "svg" ).tooltip( "option", "disabled", true );
  
   $(document).on 'click', '#modal .close', ->
     $modal_container.hide()
     $modal.hide()
+    $( "svg" ).tooltip( "option", "disabled", false );
     false

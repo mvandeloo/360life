@@ -2,7 +2,7 @@
 	<span class='add-goal'>to add a goal</span>
 </h2>
 
-<%= form_for(resource, :as => :user, :url => registration_path(:user), remote: true) do |f| %>
+<%= form_for(resource, :as => :user, :url => registration_path(:user)) do |f| %>
   <%= devise_error_messages! %>
   
   <div><%= f.label :email %><br />

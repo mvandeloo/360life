@@ -8,3 +8,4 @@ $(document).on 'ajax:success', '#new_user', (xhr, data, status) ->
 	$modal_close = $modal.find('.close')
 
 	$modal.html(data).prepend($modal_close)
+	

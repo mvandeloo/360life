@@ -1,6 +1,6 @@
 class GoalsController < ApplicationController
 
-# before_filter :auth_user, only: [:index] 
+  before_filter :save_goal, only: [:index]
   helper_method :resource
 
 	def index
@@ -17,7 +17,12 @@ class GoalsController < ApplicationController
 		  @section = Section.find params[:section_id]
     	@goal = Goal.new(params[:goal].permit(:title, :due_date, :notes, :priority))
       @goal.section = @section
-    	@goal.wheel_id = session[:wheel_id]
+
+      if current_user && current_user.wheel
+    	  @goal.wheel =  current_user.wheel
+      else
+        @goal.wheel_id = session[:wheel_id]
+      end
       # @goal.user = current_user
       
       # if @goal.save
@@ -30,6 +35,7 @@ class GoalsController < ApplicationController
         if user_signed_in?
   	      render js: "window.location = '#{ goals_path }'"
         else
+          session[:goal_id] = @goal.id
           render 'users/registrations/new'
         end
 	    else
@@ -66,6 +72,22 @@ class GoalsController < ApplicationController
 
   def resource
     User.new
+  end
+
+  def save_goal
+    if current_user
+      if session[:wheel_id]
+        current_user.wheel = Wheel.find session[:wheel_id]
+        session[:wheel_id] = nil
+      end
+
+      if session[:goal_id]
+        current_user.wheel.goals << Goal.find(session[:goal_id])
+        session[:goal_id] = nil
+      end
+    else
+      redirect_to new_user_session_path
+    end
   end
 
 end

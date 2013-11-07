@@ -1,12 +1,11 @@
 class GoalsController < ApplicationController
 
-before_filter :authenticate_user!, only: [:index] 
+before_filter :auth_user, only: [:index] 
  
 
 	def index
-      user = User.find(current_user.id)
       # @goals = Goal.all
-    	@goals = user.wheel.goals
+    	@goals = current_user.wheel.goals
   	end
 
   	def new
@@ -57,6 +56,12 @@ before_filter :authenticate_user!, only: [:index]
     @goal.destroy
     flash[:notice] = 'Your goal was destroyed'
     redirect_to goals_path
+  end
+
+  private
+
+  def auth_user
+    redirect_to new_user_registration_path unless user_signed_in?
   end
 
 end

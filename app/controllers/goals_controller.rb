@@ -49,6 +49,7 @@ class GoalsController < ApplicationController
 	end
 
 	def edit
+      @section = Section.find params[:section_id]
     	@goal = Goal.find(params[:id])
   	end
 
@@ -56,7 +57,7 @@ class GoalsController < ApplicationController
     	@goal = Goal.find(params[:id])
     	puts @goal
     	if @goal.update_attributes(params[:goal].permit(:title, :due_date, :notes, :priority))
-      		flash[:notice] = 'The goal was saved successfully.'
+      		flash[:notice] = 'Your goal was saved successfully.'
       		redirect_to :action=>'index'
     	else
       		flash[:notice] = 'The goal could not be saved.'
@@ -69,7 +70,7 @@ class GoalsController < ApplicationController
 
     @goal = Goal.find(params[:id])
     @goal.destroy
-    flash[:notice] = 'Your goal was destroyed'
+    flash[:notice] = 'Your goal was deleted from the list.'
     redirect_to goals_path
   end
 

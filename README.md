@@ -30,6 +30,6 @@ Technologies:
 Link: http://life-360.herokuapp.com
 
 Team:
-Deniss Bohanovs http://www.github.com/violentr
-Lorraine Phillips http://www.github.com/lorraine-phil
-Martin van de Loo http://www.github.com/mvandeloo
+- Deniss Bohanovs http://www.github.com/violentr
+- Lorraine Phillips http://www.github.com/lorraine-phil
+- Martin van de Loo http://www.github.com/mvandeloo

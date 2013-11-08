@@ -129,7 +129,7 @@ position: absolute;
     color: #767f84;
 }
 /* Home Button */
-.homeButton {
+.homeButton, .goal_button {
     -moz-box-shadow: 0px 10px 14px -7px #276873;
     -webkit-box-shadow: 0px 10px 14px -7px #276873;
     box-shadow: 0px 10px 14px -7px #276873;
@@ -164,6 +164,8 @@ position: absolute;
     margin: 8px 0 20px 0;
     padding: 3px 53px 3px 53px;
 }
+
+
 #deviseButtonPassword {
     margin: 8px 0 20px 0;
     padding: 7px 10px 7px 10px;
@@ -186,6 +188,17 @@ position: absolute;
     line-height: 28px;
     font-weight: bold;
     margin-bottom: 20px;
+}
+
+#modal #deviseButton, .goal_button {
+    height:40px;
+    width:220px;
+    margin: 8px 0 20px 0;
+    padding: 3px 53px 3px 53px;
+    text-align: center;
+    color: white;
+    background-color: hsl(0,0%,96%);
+    font-size: 24px; 
 }
 /* Question Form */
 .questionnaire #main {

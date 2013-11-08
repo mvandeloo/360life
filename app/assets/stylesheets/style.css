@@ -408,19 +408,8 @@ ul.nav, .nav ul {
     border-width:0px 0px 0px 0px;
 }*/
 .GoalsTable tr:first-child td{
-/*        background:-o-linear-gradient(bottom, #e1e1e1 5%, #e1e1e1 100%);    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e1e1e1), color-stop(1, #e1e1e1) );
-    background:-moz-linear-gradient( center top, #e1e1e1 5%, #e1e1e1 100% );
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#e1e1e1", endColorstr="#e1e1e1");  background: -o-linear-gradient(top,#e1e1e1,e1e1e1);
-*/
     background-color:#e1e1e1;
-/*    border:0px solid #000000;
-    text-align:center;
-    border-width:0px 0px 1px 1px;
-    font-size:14px;
-    font-family:Arial;
-    font-weight:bold;
-    color:#ffffff;
-*/}
+}
 .GoalsTable tr:first-child:hover td{
     background:-o-linear-gradient(bottom, #e1e1e1 5%, #e1e1e1 100%);    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e1e1e1), color-stop(1, #e1e1e1) );
     background:-moz-linear-gradient( center top, #e1e1e1 5%, #e1e1e1 100% );

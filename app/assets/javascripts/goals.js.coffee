@@ -8,3 +8,14 @@ $(document).on 'ajax:success', '#new_goal', (xhr, data, status) ->
 	$modal_close = $modal.find('.close')
 
 	$modal.html(data).prepend($modal_close)
+
+$(document).ready () ->
+	$(".goal_check").click () ->
+		$.ajax(
+  			type: "PUT"
+  			url: "/sections/:section_id/goals/" + $(this).val()
+			data:
+				completed: $(this).is(':checked')
+			).done (msg) ->
+			  alert "Data Saved: " + msg
+

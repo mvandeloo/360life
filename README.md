@@ -24,6 +24,6 @@ Technologies:
 - Postgres database
 - HTML5
 - CSS3
-- User login (Devise)
+- User authentication and login (Devise)
 - Photoshop
 - Illustrator

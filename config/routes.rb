@@ -10,6 +10,7 @@ LifeApp::Application.routes.draw do
 
   resources :sections do
     resources :goals
+    resources :suggestions
   end
   resources :goals, only: [:index]
 

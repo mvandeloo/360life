@@ -26,7 +26,7 @@ require 'spec_helper'
 			it 'should raise an error if the user has not selected an answer for every question'  do
 				visit new_wheel_path			
 				page.find('.homeButton').click
-				expect(page).to have_content 'Please fill out all the answers'	
+				expect(page).to have_content 'Please fill out all answers'	
 			end	
 
 		end
@@ -46,6 +46,6 @@ require 'spec_helper'
 					end
 				
 				page.find('.homeButton').click
-				expect(page).to have_content 'save wheel'		
+				expect(page).to have_content 'Click on a sector of the wheel'		
 			end		
 		end	

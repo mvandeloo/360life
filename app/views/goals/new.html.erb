@@ -22,10 +22,10 @@
   <%= f.submit class: "goal_button"%>
 <% end %>
  
-
-
-
-
-
+<%= @goals.each do |goal| %>
+	<tr>
+		<td><%= goal.suggestion.title %></td>
+	</tr>
+	<% end %>
 
 

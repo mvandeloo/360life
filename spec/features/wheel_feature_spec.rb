@@ -20,7 +20,7 @@ require 'spec_helper'
 					end
 				
 				page.find('.homeButton').click
-				expect(page).to have_content 'Simply click on any sector'	
+				expect(page).to have_content 'Click on a sector of the wheel'	
 			end	
 
 			it 'should raise an error if the user has not selected an answer for every question'  do

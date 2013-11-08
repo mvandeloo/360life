@@ -5,7 +5,12 @@ class GoalsController < ApplicationController
 
 	def index
       # @goals = Goal.all
-    	@goals = current_user.wheel.goals
+      if current_user && current_user.wheel
+        @goals = current_user.wheel.goals
+      else
+        @goals = Goal.all
+      end
+    	
   	end
 
   	def new

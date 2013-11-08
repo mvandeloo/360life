@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
+//= require z-sanburst-d3
 //= require_tree .
 //= modals
 

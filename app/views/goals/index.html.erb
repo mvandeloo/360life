@@ -1,6 +1,9 @@
 <div class="GoalsTable" >
 <table>
 	<tr>
+		<td>
+		Complete
+		</td>	
        <td>
          Section
        </td>
@@ -24,6 +27,7 @@
 
 	<% @goals.each do |goal| %>
 	<tr>
+		<td><input type="checkbox" class="goal_check" name="completed" value=<%= goal.id%>/></td>
 		<td><%= goal.section.section_name %></td>
 		<td><%= goal.title %></td>
 		<td><%= goal.priority %></td>
@@ -39,5 +43,5 @@
 <% if current_user.wheel.nil? %>
 <%= link_to 'Create Wheel', new_wheel_path, :class => "homeButton" %>
 <% else %>
-<%= link_to 'Show Wheel', wheel_path(current_user), :class => "homeButton" %>
+<%= link_to 'Create More Goals', wheel_path(current_user), :class => "homeButton" %>
 <% end %>

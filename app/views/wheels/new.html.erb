@@ -6,7 +6,7 @@
 </div>
 
 <br>
-<% if Rails.env.development? %>
+<% if Rails.env.development? || Rails.env.test? %>
 	<button class='random'>Random answers</button>
 <% end %>
 

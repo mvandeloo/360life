@@ -7,8 +7,7 @@ class User < ActiveRecord::Base
   has_one :wheel
   has_many :answers, through: :wheel   
 
-  def wheel_from_session
-  	# Wheel.find(session[:wheel_id]).update_attribute(:user_id,self.id)
-   #  session[:wheel_id] = nil
+  def wheel_from_id(wheel_id)
+  	Wheel.find(wheel_id).update_attribute(:user_id,self.id)
   end
 end

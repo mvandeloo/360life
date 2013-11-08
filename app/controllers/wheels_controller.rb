@@ -26,7 +26,7 @@ class WheelsController < ApplicationController
     # raise params[:answer].inspect
     if params[:answer].nil? || (params[:answer].length < Question.all.count)
       flash[:error] = 'Please fill out all answers below.'
-      render 'new'
+      render json: { status: 'failure' }
     else
       # @user = User.find(params[:user_id])
 
@@ -47,7 +47,7 @@ class WheelsController < ApplicationController
           session[:wheel_id] = @wheel.id
         end
 
-        redirect_to @wheel
+        render json: { status: 'success', url: wheel_path(@wheel) }
       else
         flash.now[:error] = @wheel.errors.full_messages.inspect
         render 'new'

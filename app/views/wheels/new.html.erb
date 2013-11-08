@@ -14,7 +14,7 @@
 	<%= flash[:error] %>
 </div>
 
-<%= form_for @wheel do |f| %>
+<%= form_for @wheel, remote: true do |f| %>
 
 	<div id="accordion">
 

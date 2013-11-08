@@ -15,3 +15,10 @@ fillQuestionnaire = ->
 $ ->
 	$('.random').on 'click', fillQuestionnaire
 	$('svg').tooltip track: true
+
+	$('#new_wheel').on 'ajax:success', (xhr, data, status) ->
+		console.log(data)
+		if(data.status == 'success')
+			window.location = data.url
+		else
+			$('.error_format').html('Please fill out all the answers')

@@ -3,8 +3,6 @@ Makers Academy Final Project
 
 Project to move a popular paper-based tool (the wheel of life) as used by life coaches and motivational trainers to a digitized version.
 
-![alt text](s3.amazonaws.com/Github-14/360Life.png “Wheel of Life - Ruby on Rails")
-
 Functionality:
 - Generate data driven document (wheel of life) from user answered  questionnaire
 - Implement user authenticatioln (includes user sign-up and login)

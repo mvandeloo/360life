@@ -31,5 +31,5 @@ Link: http://my360-life.herokuapp.com/
 
 Team:
 - Deniss Bohanovs http://www.github.com/violentr
-- Lorraine Phillips http://www.github.com/lorraine-phil
+- Lorraine Phillips http://www.github.com/lorraine-phill
 - Martin van de Loo http://www.github.com/mvandeloo

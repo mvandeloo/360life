@@ -1,13 +1,13 @@
 Makers Academy Final Project
 ============================
 
-Project to move a popular paper-based tool (the wheel of life) as used by life coaches and motivational trainers to a digitized version.
+Project to move a popular paper-based tool (the wheel of life) as used by life coaches and motivational trainers to a digitized version as created from answering a questionairre.
 
 ![alt text](https://s3.amazonaws.com/Github-14/360Life.png)
 
 Functionality:
 - Generate data driven document (wheel of life) from user answered  questionnaire
-- Implement user authenticatioln (includes user sign-up and login)
+- Implement user authentication (includes user sign-up and login)
 - Store, add, edit and delete user goals
 - Store and edit user wheel
 
